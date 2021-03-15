@@ -9,7 +9,7 @@
     <h1>計算アプリ</h1>
     <h2>計算式を入力してください</h2>
     <form name="form1" action="answer.php" method="post">
-        <input type="number" required="required" name = "num1">
+        <input type="number" required name = "num1">
         <select name="selOpe" size=1>
             <option value="＋">＋</option>
             <option value="－">－</option>
