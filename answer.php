@@ -27,10 +27,10 @@
         default:
         break;
         }
-    print ($a." ".$ope." ".$b." = ".$answer."\n");
+    echo ($a." ".$ope." ".$b." = ".$answer."\n");
     ?>
     <br/>
     <br/>
-        <a href="#" onclick="history.back(); return false;">戻る</a>
+        <a href="../03_calc/calc_form.php" onclick="history.back(); return false;">戻る</a>
 </body>
 </html>
