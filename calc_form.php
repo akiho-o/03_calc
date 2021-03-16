@@ -11,8 +11,8 @@
     <form name="form1" action="answer.php" method="post">
         <input type="number" name="num1" required>
         <select name="selOpe" size=1>
-            <option value="+">＋</option>
-            <option value="-">－</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
             <option value="×">×</option>
             <option value="÷">÷</option>
         </select>

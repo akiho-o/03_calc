@@ -1,23 +1,25 @@
 <?php
-$a = $_POST['num1'];
-$b = $_POST['num2'];
-$ope = $_POST['selOpe'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-switch ($ope) {
-    case "＋":
-        $answer = $a + $b;
-        break;
-    case "－":
-        $answer = $a - $b;
-        break;
-    case "×":
-        $answer = $a * $b;
-        break;
-    case "÷":
-        $answer = $a / $b;
-        break;
+    $a = $_POST['num1'];
+    $b = $_POST['num2'];
+    $ope = $_POST['selOpe'];
+
+    switch ($ope) {
+        case "+":
+            $answer = $a + $b;
+            break;
+        case "-":
+            $answer = $a - $b;
+            break;
+        case "×":
+            $answer = $a * $b;
+            break;
+        case "÷":
+            $answer = $a / $b;
+            break;
+    }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -29,7 +31,7 @@ switch ($ope) {
 <body>
     <h1>計算結果</h1>
     <p>
-        <?= $a . $ope . $b . " = " . $answer . "\n" ?>
+        <?= $a . $ope . $b . " = " . $answer ?>
     </p>
     <a href="calc_form.php">戻る</a>
 </body>
