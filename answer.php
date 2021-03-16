@@ -1,3 +1,24 @@
+<?php
+$a = $_POST['num1'];
+$b = $_POST['num2'];
+$ope = $_POST['selOpe'];
+
+switch ($ope) {
+    case "＋":
+        $answer = $a + $b;
+        break;
+    case "－":
+        $answer = $a - $b;
+        break;
+    case "×":
+        $answer = $a * $b;
+        break;
+    case "÷":
+        $answer = $a / $b;
+        break;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -7,30 +28,9 @@
 </head>
 <body>
     <h1>計算結果</h1>
-    <?php
-    $a = $_POST['num1'];
-    $b = $_POST['num2'];
-    $ope = $_POST['selOpe'];
-        switch ($ope) {
-        case "＋":
-        $answer = $a + $b;
-        break;
-        case "－":
-        $answer = $a - $b;
-        break;
-        case "×":
-        $answer = $a * $b;
-        break;
-        case "÷":
-        $answer = $a / $b;
-        break;
-        default:
-        break;
-        }
-    echo ($a." ".$ope." ".$b." = ".$answer."\n");
-    ?>
-    <br/>
-    <br/>
-        <a href="../03_calc/calc_form.php" onclick="history.back(); return false;">戻る</a>
+    <p>
+        <?= $a . $ope . $b . " = " . $answer . "\n" ?>
+    </p>
+    <a href="calc_form.php">戻る</a>
 </body>
 </html>
